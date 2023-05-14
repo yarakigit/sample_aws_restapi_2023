@@ -1,17 +1,15 @@
 #!/bin/zsh
 settings=$(cat settings.json)
 
-
-image_file=$(echo $settings | jq -r '.image_path')
 api_endpoint=$(echo $settings | jq -r '.endpoint')
-
-image_data=$(base64 < "$image_file")
+memo_title=$(echo $settings | jq -r '.memotitle')
+memo_body=$(echo $settings | jq -r '.memobody')
 
 # リクエストの作成
 request_body=$(cat << EOF
 {
-    "name": "Sample",
-    "image": "$image_data"
+    "memoTitle": "$memo_title",
+    "memoBody": "$memo_body"
 }
 EOF
 )

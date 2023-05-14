@@ -1,20 +1,21 @@
 #DymamoDB
 -  テーブル名
-    - image-user-save-test
+    - memo-user-save-test
 - パーティションキー
-    - user-custom-img-id
+    - memo-user-save-test-id
 
 # IAM
 - ロール名
-    - test-image-user-save-role
+    - memo-user-save-test
 
 # Lambda
-- test-image-user-save-post 
+- memo-user-save-test-post
+- memo-user-save-test-get
 
 # API Gateway
 - API名
-    - test-image-user-save-api
+    - memo-user-save-test-api
 - リソース名
-    - images
+    - test-resource
 - ステージ名
     - test-stage
