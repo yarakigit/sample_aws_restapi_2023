@@ -19,13 +19,17 @@ def lambda_handler(event, context):
     # 画像のデコード
     image_binary = base64.b64decode(image_data)
 
+    # 日付の取得
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
     # 画像の保存
     image_id = str(datetime.now().timestamp())  # 一意の画像IDを生成
     table.put_item(
         Item={
             'user-custom-img-id': image_id,
             'name': name,
-            'image': image_binary
+            'image': image_binary,
+            'timestamp' : timestamp
         }
     )
 
@@ -37,4 +41,3 @@ def lambda_handler(event, context):
     }
 
     return response
-
