@@ -33,4 +33,4 @@
     - Lambda関数名を入力
     - `LAMBDA`の`統合リクエスト` :arrow_right: `マッチングテンプレートの追加` :arrow_right: `application/json`
     - `アクション` :arrow_right: `APIのデプロイ`
-        - ステージを作成もしくが選択   
+        - ステージを作成もしくは選択   
