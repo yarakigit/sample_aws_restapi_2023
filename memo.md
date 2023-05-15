@@ -12,6 +12,7 @@
 - memo-user-save-test-post
 - memo-user-save-test-get
 - memo-user-save-test-delete
+- memo-user-save-test-put
 
 # API Gateway
 - API名
