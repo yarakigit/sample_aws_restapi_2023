@@ -11,6 +11,7 @@
 # Lambda
 - memo-user-save-test-post
 - memo-user-save-test-get
+- memo-user-save-test-delete
 
 # API Gateway
 - API名
