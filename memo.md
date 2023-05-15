@@ -3,7 +3,10 @@
     - memo-user-save-test
 - パーティションキー
     - memo-user-save-test-id
-
+- その他キー
+    - memotitle
+    - memobody
+    - timestamp
 # IAM
 - ロール名
     - memo-user-save-test
@@ -21,3 +24,20 @@
     - test-resource
 - ステージ名
     - test-stage
+
+
+# Response JSON
+- memoID
+- memoTitle
+- memoBody
+- timestamp
+
+# settings.json
+~~~json
+{
+    "endpoint": "https://hogepiyo.com/test-stage/test-resource",
+    "memotitle": "this is NEW memo title",
+    "memobody": "this is NEW memo body",
+    "memoid":"hogepiyo"
+}  
+~~~
