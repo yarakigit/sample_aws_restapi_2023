@@ -2,6 +2,7 @@
 settings=$(cat settings.json)
 
 api_endpoint=$(echo $settings | jq -r '.endpoint')
+api_key=$(echo $settings | jq -r '.apikey')
 memo_id=$(echo $settings | jq -r '.memoid')
 
 # リクエストの作成
@@ -16,6 +17,7 @@ EOF
 # API Gatewayへのリクエスト
 response=$(curl -X GET \
     -H "Content-Type: application/json" \
+    -H "x-api-key: $api_key" \
     -d "$request_body" \
     "$api_endpoint")
 

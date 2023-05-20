@@ -33,4 +33,18 @@
     - Lambda関数名を入力
     - `LAMBDA`の`統合リクエスト` :arrow_right: `マッチングテンプレートの追加` :arrow_right: `application/json`
     - `アクション` :arrow_right: `APIのデプロイ`
-        - ステージを作成もしくは選択   
+        - ステージを作成もしくは選択
+
+
+## APIキーの設定
+- `API Gateway` :arrow_right: `リソース` :arrow_right: メソッドを選択 :arrow_right: `メソッドリクエスト`を選択 :arrow_right: `APIキーの必要性`を`true`に設定
+    - [AWS API Gateway コンソールを使用して API キーをセットアップする](https://docs.aws.amazon.com/ja_jp/apigateway/latest/developerguide/api-gateway-setup-api-key-with-console.html) 
+
+- APIキーの作成
+    - `API Gateway` :arrow_right: `アクション` :arrow_right: `APIキーの作成`
+
+## 使用量プランの作成
+- `API Gateway` :arrow_right: `使用量プラン` :arrow_right: `作成`
+- `API`と`ステージ`を選択
+- 既存のキーを使用する場合, `API キーを使用量プランに追加`
+    - [AWS API Gateway REST API を使用して API キーをセットアップする](https://docs.aws.amazon.com/ja_jp/apigateway/latest/developerguide/api-gateway-setup-api-key-with-restapi.html)
