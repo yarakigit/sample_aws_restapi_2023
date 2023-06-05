@@ -7,11 +7,8 @@ def lambda_handler(event, context):
     table = dynamodb.Table('memo-user-save-test')
 
     # API Gatewayからのリクエストパラメーターの取得
-    request_body = event['body']
-    request_body = json.loads(request_body)
-
     # 固有のキーの取得
-    memoID = request_body['memoID']
+    memoID = event['memoID']
 
     # テーブルから情報を取得
     try:

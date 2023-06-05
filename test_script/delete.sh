@@ -18,7 +18,6 @@ EOF
 response=$(curl -X DELETE \
     -H "Content-Type: application/json" \
     -H "x-api-key: $api_key" \
-    -d "$request_body" \
-    "$api_endpoint")
+    "$api_endpoint?memoID=$memo_id")
 
 echo $response
