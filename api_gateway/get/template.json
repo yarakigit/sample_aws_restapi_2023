@@ -1,0 +1,3 @@
+{
+    "memoID" : "$input.params('memoID')"
+}
